@@ -91,6 +91,29 @@
       .skills-list li strong {
         font-weight: bold; /* Make the skill names bold */
       }
+
+      .col-3 {
+        position: relative;
+      }
+
+      .client-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.871);
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .col-3:hover .client-overlay {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -527,7 +550,7 @@
             </div>
 
             <a
-              href="work/melody.html"
+              href="melody.html"
               class="col-3 wow fadeIn"
               data-wow-delay="0.1s"
               target="_blank"
@@ -546,7 +569,7 @@
             </a>
 
             <a
-              href="work/smashon.html"
+              href="smashon.html"
               target="_blank"
               class="col-3 wow fadeIn"
               data-wow-delay="0.1s"
@@ -564,7 +587,7 @@
               </div>
             </a>
             <a
-              href="work/swiftstay.html"
+              href="swiftstay.html"
               target="_blank"
               class="col-3 wow fadeIn"
               data-wow-delay="0.1s"
