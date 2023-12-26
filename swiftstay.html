@@ -36,12 +36,68 @@
       type="text/css"
     />
     <style>
+      @media screen and (min-width: 1024px) {
+        /* Styles for laptops and desktops */
+        .banner-top {
+          font-size: 100px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #77eb73;
+          padding: 250px;
+          border-radius: 0 0 50px 50px;
+          color: white;
+        }
+        .header-work {
+          font-size: 50px;
+          font-weight: bold;
+          color: #77eb73;
+        }
+
+        .center {
+          font-weight: 600;
+          width: 30%;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          width: 10%;
+          color: #77eb73;
+        }
+
+        .year {
+          margin: 134px 0 30px;
+        }
+
+        .mobile-right {
+          display: none;
+        }
+
+        .sec-line {
+          display: none;
+        }
+
+        .container-btn {
+          display: flex;
+          gap: 50px;
+        }
+
+        .next-project {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 25px;
+          font-size: 25px;
+          font-weight: bold;
+          color: #77eb73;
+        }
+        .container-btn-web {
+          margin-top: 25px;
+        }
+      }
       .custom-link {
-        margin-top: 15px;
-        display: inline-block;
         position: relative;
         text-decoration: none;
-        color: #000; /* Set your desired text color */
         cursor: pointer;
       }
 
@@ -53,6 +109,82 @@
         bottom: -2px;
         height: 2px;
         background-color: #77eb73; /* Set your desired underline color */
+      }
+
+      /* Mobile media query */
+      @media screen and (max-width: 599px) {
+        /* Styles for mobile devices */
+        .banner-top {
+          font-size: 70px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #77eb73;
+          padding: 150px;
+          border-radius: 0 0 235px 235px;
+          color: white;
+        }
+
+        .header-work {
+          font-size: 30px;
+          font-weight: bold;
+          color: #77eb73;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          color: #77eb73;
+        }
+        .center {
+          width: 70%;
+          font-weight: 600;
+        }
+
+        .year {
+          margin: 188px 0 30px;
+        }
+
+        .mobile-right {
+          font-size: 17px;
+          font-weight: 550;
+        }
+
+        .container-btn {
+          gap: 50px;
+        }
+
+        .next-project {
+          margin-top: 25px;
+          display: flex;
+          padding: 15px;
+          font-size: 20px;
+          font-weight: bold;
+          width: 100%;
+          justify-content: space-between;
+          border: 2px solid #77eb73;
+          color: #77eb73;
+        }
+
+        #screenshot {
+          display: flex;
+          justify-content: center;
+        }
+
+        .extra-custom-link {
+          border: 2px solid #77eb73;
+          width: 100%;
+          padding: 20px;
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+        }
       }
     </style>
   </head>
@@ -199,27 +331,9 @@
       <main id="content">
         <section id="website" class="scrollto clearfix">
           <div class="row clearfix">
-            <div
-              style="
-                font-size: 100px;
-                font-weight: bold;
-                display: flex;
-                justify-content: center;
-                background-color: #77eb73;
-                padding: 250px;
-                border-radius: 0 0 50px 50px;
-                color: white;
-              "
-            >
-              SwiftStay
-            </div>
+            <div class="banner-top">SwiftStay</div>
             <div class="work" style="margin-top: 40px">
-              <div
-                class="header-work"
-                style="font-size: 50px; font-weight: bold; color: #77eb73"
-              >
-                SWIFTSTAY RESPONSABLE
-              </div>
+              <div class="header-work">SWIFTSTAY RESPONSABLE</div>
               <div
                 class="line"
                 style="border: 1px solid #77eb73; margin: 10px 0"
@@ -228,17 +342,9 @@
                 class="work-details"
                 style="display: flex; font-size: 20px; margin-top: 25px"
               >
-                <div
-                  class="left"
-                  style="
-                    margin-right: 50px;
-                    font-weight: bold;
-                    width: 10%;
-                    color: #77eb73;
-                  "
-                >
+                <div class="left">
                   <div class="first-row">CATEGORY</div>
-                  <div class="first-row" style="margin: 133px 0 30px">YEAR</div>
+                  <div class="first-row year">YEAR</div>
                   <div class="first-row">SEMESTER</div>
                 </div>
                 <div class="center" style="font-weight: 600; width: 30%">
@@ -273,7 +379,10 @@
                     Password : a
                   </div>
 
-                  <div style="display: flex; gap: 50px">
+                  <div
+                    class="container-btn-web"
+                    style="display: flex; gap: 50px"
+                  >
                     <div
                       class="custom-link"
                       onclick="window.open('https://swiftstayapi.000webhostapp.com/', '_blank')"
@@ -288,6 +397,48 @@
                       <i class="fa fa-github fa-xl"></i>
                       Code on GitHub
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sec-line"
+                style="margin: 25px 0; border: 1px solid #77eb73"
+              ></div>
+              <div class="mobile-right" style="width: 100%">
+                <div style="text-align: justify">
+                  SwiftStay is a user-friendly hotel booking website that
+                  connects with Booking.com's API for real-time hotel
+                  information. Users can easily explore and book accommodations,
+                  and a secure authentication system allows them to manage
+                  bookings seamlessly. The site prioritizes real-time updates,
+                  ensuring accurate availability and pricing. SwiftStay offers a
+                  plan and customize hotel for the users to stays with ease.
+                  <br />
+                </div>
+                <div style="margin-top: 20px">
+                  <strong>Example account</strong> <br />
+                  Username : akmal
+                  <br />
+                  Password : a
+                </div>
+                <div
+                  class="line"
+                  style="margin-top: 25px; border: 1px solid #77eb73"
+                ></div>
+                <div class="container-btn">
+                  <div
+                    class="custom-link extra-custom-link"
+                    onclick="window.open('https://swiftstayapi.000webhostapp.com/', '_blank')"
+                  >
+                    <i class="fa fa-external-link fa-xl"></i>
+                    View the website
+                  </div>
+                  <div
+                    class="custom-link extra-custom-link"
+                    onclick="window.open('https://github.com/NotAjumma/swiftstay', '_blank')"
+                  >
+                    <i class="fa fa-github fa-xl"></i>
+                    Code on GitHub
                   </div>
                 </div>
               </div>
@@ -382,15 +533,7 @@
             </div>
 
             <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                margin-top: 25px;
-                font-size: 25px;
-                font-weight: bold;
-                color: #77eb73;
-              "
-              class="custom-link"
+              class="custom-link next-project"
               onclick="window.location.href='melody.html'"
             >
               <div>Next Project</div>

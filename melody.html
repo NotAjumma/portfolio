@@ -48,13 +48,57 @@
           border-radius: 0 0 50px 50px;
           color: white;
         }
+        .header-work {
+          font-size: 50px;
+          font-weight: bold;
+          color: #520c60;
+        }
+
+        .center {
+          font-weight: 600;
+          width: 30%;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          width: 10%;
+          color: #520c60;
+        }
+
+        .year {
+          margin: 80px 0 30px;
+        }
+
+        .mobile-right {
+          display: none;
+        }
+
+        .sec-line {
+          display: none;
+        }
+
+        .container-btn {
+          display: flex;
+          gap: 50px;
+        }
+
+        .next-project {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 25px;
+          font-size: 25px;
+          font-weight: bold;
+          color: #520c60;
+        }
+
+        .container-btn-web {
+          margin-top: 25px;
+        }
       }
       .custom-link {
-        margin-top: 15px;
-        display: inline-block;
         position: relative;
         text-decoration: none;
-        color: #000; /* Set your desired text color */
         cursor: pointer;
       }
 
@@ -72,14 +116,75 @@
       @media screen and (max-width: 599px) {
         /* Styles for mobile devices */
         .banner-top {
-          font-size: 100px;
+          font-size: 70px;
           font-weight: bold;
           display: flex;
           justify-content: center;
           background-color: #520c60;
-          padding: 250px;
+          padding: 150px;
           border-radius: 0 0 235px 235px;
           color: white;
+        }
+
+        .header-work {
+          font-size: 30px;
+          font-weight: bold;
+          color: #520c60;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          color: #520c60;
+        }
+        .center {
+          width: 70%;
+          font-weight: 600;
+        }
+
+        .year {
+          margin: 135px 0 30px;
+        }
+
+        .mobile-right {
+          font-size: 17px;
+          font-weight: 550;
+        }
+
+        .container-btn {
+          gap: 50px;
+        }
+
+        .next-project {
+          margin-top: 25px;
+          display: flex;
+          padding: 15px;
+          font-size: 20px;
+          font-weight: bold;
+          width: 100%;
+          justify-content: space-between;
+          border: 2px solid #520c60;
+          color: #520c60;
+        }
+
+        #screenshot {
+          display: flex;
+          justify-content: center;
+        }
+
+        .extra-custom-link {
+          border: 2px solid #520c60;
+          width: 100%;
+          padding: 20px;
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
         }
       }
     </style>
@@ -229,12 +334,7 @@
           <div class="row clearfix">
             <div class="banner-top">Melody</div>
             <div class="work" style="margin-top: 40px">
-              <div
-                class="header-work"
-                style="font-size: 50px; font-weight: bold; color: #520c60"
-              >
-                MELODY RESPONSABLE
-              </div>
+              <div class="header-work">MELODY RESPONSABLE</div>
               <div
                 class="line"
                 style="border: 1px solid #520c60; margin: 10px 0"
@@ -243,20 +343,12 @@
                 class="work-details"
                 style="display: flex; font-size: 20px; margin-top: 25px"
               >
-                <div
-                  class="left"
-                  style="
-                    margin-right: 50px;
-                    font-weight: bold;
-                    width: 10%;
-                    color: #520c60;
-                  "
-                >
+                <div class="left">
                   <div class="first-row">CATEGORY</div>
-                  <div class="first-row" style="margin: 80px 0 30px">YEAR</div>
+                  <div class="first-row year">YEAR</div>
                   <div class="first-row">SEMESTER</div>
                 </div>
-                <div class="center" style="font-weight: 600; width: 30%">
+                <div class="center">
                   <div class="first-row">
                     <div class="sub-first-row">Web Development</div>
                     <div class="sub-first-row">Memberships System</div>
@@ -267,6 +359,7 @@
                     Develop on Semester 5
                   </div>
                 </div>
+
                 <div class="right" style="width: 60%">
                   <div style="text-align: justify">
                     Melody Website, developed using the CodeIgniter 4 framework,
@@ -284,7 +377,10 @@
                     <br />
                     Password : n
                   </div>
-                  <div style="display: flex; gap: 50px">
+                  <div
+                    class="container-btn-web"
+                    style="display: flex; gap: 50px"
+                  >
                     <div
                       class="custom-link"
                       onclick="window.open('https://melody2u.000webhostapp.com/', '_blank')"
@@ -299,6 +395,48 @@
                       <i class="fa fa-github fa-xl"></i>
                       Code on GitHub
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sec-line"
+                style="margin: 25px 0; border: 1px solid #520c60"
+              ></div>
+              <div class="mobile-right" style="width: 100%">
+                <div style="text-align: justify">
+                  Melody Website, developed using the CodeIgniter 4 framework,
+                  is a user-friendly platform catering to music enthusiasts. It
+                  features a membership system with different levels (Monthly,
+                  Yearly), offering exclusive discounts on album purchases.
+                  Users can explore categorized albums, add them to a cart, and
+                  enjoy automated membership discounts during checkout. Admins
+                  have a secure panel to manage albums, memberships, and orders
+                  efficiently. <br />
+                </div>
+                <div style="margin-top: 20px">
+                  <strong>Example account</strong> <br />
+                  Username : nizam
+                  <br />
+                  Password : n
+                </div>
+                <div
+                  class="line"
+                  style="margin-top: 25px; border: 1px solid #520c60"
+                ></div>
+                <div class="container-btn">
+                  <div
+                    class="custom-link extra-custom-link"
+                    onclick="window.open('https://melody2u.000webhostapp.com/', '_blank')"
+                  >
+                    <i class="fa fa-external-link fa-xl"></i>
+                    View the website
+                  </div>
+                  <div
+                    class="custom-link extra-custom-link"
+                    onclick="window.open('https://github.com/NotAjumma/melody', '_blank')"
+                  >
+                    <i class="fa fa-github fa-xl"></i>
+                    Code on GitHub
                   </div>
                 </div>
               </div>
@@ -522,15 +660,7 @@
             </div>
 
             <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                margin-top: 25px;
-                font-size: 25px;
-                font-weight: bold;
-                color: #520c60;
-              "
-              class="custom-link"
+              class="custom-link next-project"
               onclick="window.location.href='smashon.html'"
             >
               <div>Next Project</div>

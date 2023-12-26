@@ -54,6 +54,156 @@
         height: 2px;
         background-color: #9881f5; /* Set your desired underline color */
       }
+      @media screen and (min-width: 1024px) {
+        /* Styles for laptops and desktops */
+        .banner-top {
+          font-size: 100px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #9881f5;
+          padding: 250px;
+          border-radius: 0 0 50px 50px;
+          color: white;
+        }
+        .header-work {
+          font-size: 50px;
+          font-weight: bold;
+          color: #9881f5;
+        }
+
+        .center {
+          font-weight: 600;
+          width: 30%;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          width: 10%;
+          color: #9881f5;
+        }
+
+        .year {
+          margin: 162px 0 30px;
+        }
+
+        .mobile-right {
+          display: none;
+        }
+
+        .sec-line {
+          display: none;
+        }
+
+        .container-btn {
+          display: flex;
+          gap: 50px;
+        }
+
+        .next-project {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 25px;
+          font-size: 25px;
+          font-weight: bold;
+          color: #9881f5;
+        }
+
+        .container-btn-web {
+          margin-top: 25px;
+        }
+      }
+      .custom-link {
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .custom-link:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background-color: #9881f5; /* Set your desired underline color */
+      }
+
+      /* Mobile media query */
+      @media screen and (max-width: 599px) {
+        /* Styles for mobile devices */
+        .banner-top {
+          font-size: 70px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #9881f5;
+          padding: 150px;
+          border-radius: 0 0 235px 235px;
+          color: white;
+        }
+
+        .header-work {
+          font-size: 30px;
+          font-weight: bold;
+          color: #9881f5;
+        }
+
+        .right {
+          display: none;
+        }
+
+        .left {
+          margin-right: 50px;
+          font-weight: bold;
+          color: #9881f5;
+        }
+        .center {
+          width: 70%;
+          font-weight: 600;
+        }
+
+        .year {
+          margin: 188px 0 30px;
+        }
+
+        .mobile-right {
+          font-size: 17px;
+          font-weight: 550;
+        }
+
+        .container-btn {
+          gap: 50px;
+        }
+
+        .next-project {
+          margin-top: 25px;
+          display: flex;
+          padding: 15px;
+          font-size: 20px;
+          font-weight: bold;
+          width: 100%;
+          justify-content: space-between;
+          border: 2px solid #9881f5;
+          color: #9881f5;
+        }
+
+        #screenshot {
+          display: flex;
+          justify-content: center;
+        }
+        .extra-custom-link {
+          border: 2px solid #9881f5;
+          width: 100%;
+          padding: 20px;
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -199,27 +349,9 @@
       <main id="content">
         <section id="website" class="scrollto clearfix">
           <div class="row clearfix">
-            <div
-              style="
-                font-size: 100px;
-                font-weight: bold;
-                display: flex;
-                justify-content: center;
-                background-color: #9881f5;
-                padding: 250px;
-                border-radius: 0 0 50px 50px;
-                color: white;
-              "
-            >
-              SmashON
-            </div>
+            <div class="banner-top">SmashON</div>
             <div class="work" style="margin-top: 40px">
-              <div
-                class="header-work"
-                style="font-size: 50px; font-weight: bold; color: #9881f5"
-              >
-                SMASHON RESPONSABLE
-              </div>
+              <div class="header-work">SMASHON RESPONSABLE</div>
               <div
                 class="line"
                 style="border: 1px solid #9881f5; margin: 10px 0"
@@ -228,20 +360,12 @@
                 class="work-details"
                 style="display: flex; font-size: 20px; margin-top: 25px"
               >
-                <div
-                  class="left"
-                  style="
-                    margin-right: 50px;
-                    font-weight: bold;
-                    width: 10%;
-                    color: #9881f5;
-                  "
-                >
+                <div class="left">
                   <div class="first-row">CATEGORY</div>
-                  <div class="first-row" style="margin: 161px 0 30px">YEAR</div>
+                  <div class="first-row year">YEAR</div>
                   <div class="first-row">SEMESTER</div>
                 </div>
-                <div class="center" style="font-weight: 600; width: 30%">
+                <div class="center">
                   <div class="first-row">
                     <div class="sub-first-row">Mobile Development</div>
                     <div class="sub-first-row">Reservation System</div>
@@ -269,7 +393,10 @@
                     hassle-free court reservations and community interaction.
                   </div>
 
-                  <div style="display: flex; gap: 50px">
+                  <div
+                    class="container-btn-web"
+                    style="display: flex; gap: 50px"
+                  >
                     <div
                       class="custom-link"
                       onclick="window.open('https://github.com/NotAjumma/badmintonBuddyProject', '_blank')"
@@ -277,6 +404,37 @@
                       <i class="fa fa-github fa-xl"></i>
                       Code on GitHub
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sec-line"
+                style="margin: 25px 0; border: 1px solid #9881f5"
+              ></div>
+              <div class="mobile-right" style="width: 100%">
+                <div style="text-align: justify">
+                  SmashON is a user-friendly mobile app designed for badminton
+                  enthusiasts. You can easily reserve courts, chat with other
+                  players using Firebase as database, and authenticate via
+                  Gmail. The app further enhances security and convenience with
+                  a QR code entrance pass system, allowing users to gain access
+                  to the facility in a contactless manner. Developed with
+                  Flutter framework, SmashON provides a seamless experience for
+                  Android users, making it a go-to solution for hassle-free
+                  court reservations and community interaction. <br />
+                </div>
+
+                <div
+                  class="line"
+                  style="margin-top: 25px; border: 1px solid #9881f5"
+                ></div>
+                <div class="container-btn">
+                  <div
+                    class="custom-link extra-custom-link"
+                    onclick="window.open('https://github.com/NotAjumma/badmintonBuddyProject', '_blank')"
+                  >
+                    <i class="fa fa-github fa-xl"></i>
+                    Code on GitHub
                   </div>
                 </div>
               </div>
@@ -471,15 +629,7 @@
             </div>
 
             <div
-              style="
-                display: flex;
-                justify-content: space-between;
-                margin-top: 25px;
-                font-size: 25px;
-                font-weight: bold;
-                color: #9881f5;
-              "
-              class="custom-link"
+              class="custom-link next-project"
               onclick="window.location.href='swiftstay.html'"
             >
               <div>Next Project</div>
