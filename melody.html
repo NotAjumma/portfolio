@@ -36,6 +36,19 @@
       type="text/css"
     />
     <style>
+      @media screen and (min-width: 1024px) {
+        /* Styles for laptops and desktops */
+        .banner-top {
+          font-size: 100px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #520c60;
+          padding: 250px;
+          border-radius: 0 0 50px 50px;
+          color: white;
+        }
+      }
       .custom-link {
         margin-top: 15px;
         display: inline-block;
@@ -53,6 +66,21 @@
         bottom: -2px;
         height: 2px;
         background-color: #520c60; /* Set your desired underline color */
+      }
+
+      /* Mobile media query */
+      @media screen and (max-width: 599px) {
+        /* Styles for mobile devices */
+        .banner-top {
+          font-size: 100px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          background-color: #520c60;
+          padding: 250px;
+          border-radius: 0 0 235px 235px;
+          color: white;
+        }
       }
     </style>
   </head>
@@ -199,20 +227,7 @@
       <main id="content">
         <section id="website" class="scrollto clearfix">
           <div class="row clearfix">
-            <div
-              style="
-                font-size: 100px;
-                font-weight: bold;
-                display: flex;
-                justify-content: center;
-                background-color: #520c60;
-                padding: 250px;
-                border-radius: 0 0 50px 50px;
-                color: white;
-              "
-            >
-              Melody
-            </div>
+            <div class="banner-top">Melody</div>
             <div class="work" style="margin-top: 40px">
               <div
                 class="header-work"

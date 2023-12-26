@@ -124,8 +124,31 @@ a:hover,
 
 /* Banner Background and Text Colors */
 
-#banner {
-  background: url("../images/user-images/akmalbanner.png") no-repeat center top;
+/* Tablet media query */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  #banner {
+    background: url("../images/user-images/akmalbanner.png") no-repeat center
+      top;
+  }
+  /* Styles for tablets */
+}
+
+/* Laptop/Desktop media query */
+@media screen and (min-width: 1024px) {
+  #banner {
+    background: url("../images/user-images/akmalbanner.png") no-repeat center
+      top;
+  }
+  /* Styles for laptops and desktops */
+}
+
+/* Mobile media query */
+@media screen and (max-width: 599px) {
+  #banner {
+    background: url("../images/banner-images/banner-mobilee.png") no-repeat
+      center top;
+  }
+  /* Styles for mobile devices */
 }
 
 /*------------------------------------------------------------------------------------------*/

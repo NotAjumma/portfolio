@@ -36,12 +36,19 @@
       type="text/css"
     />
     <style>
-      #banner,
-      #about,
-      #service,
-      #skills,
-      #works {
-        height: 100vh;
+      /* Laptop/Desktop media query */
+      @media screen and (min-width: 1024px) {
+        #banner,
+        #about,
+        #service,
+        #skills,
+        #works {
+          height: 100vh;
+        }
+
+        .col-2-3 {
+          margin-top: 70px;
+        }
       }
 
       .image-container {
@@ -114,6 +121,50 @@
       .col-3:hover .client-overlay {
         opacity: 1;
       }
+
+      .img-about {
+        background: url("../images/user-images/akmalberdiri2.jpeg") no-repeat;
+      }
+
+      /* Default styles for all devices */
+
+      /* Mobile media query */
+      @media screen and (max-width: 599px) {
+        .col-38 {
+          margin-top: 400px; /* Adjust the margin-top value for mobile devices */
+        }
+
+        .section-heading {
+          padding: 0;
+        }
+
+        .button-heading {
+          display: flex;
+          justify-content: center;
+        }
+
+        .btn-heading {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+
+        #responsiveImage {
+          margin-top: 80px;
+          height: 500px;
+          width: 100%;
+        }
+
+        .section-details {
+          text-align: justify;
+        }
+
+        .mobile-col-3 {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -163,7 +214,7 @@
 
                 <!--The Logo that is shown on the sticky Navigation Bar-->
                 <img
-                  src="images/logo-2.png"
+                  src="fonts/Akmal2.png"
                   id="navigation-logo"
                   alt="Landing Page"
                 />
@@ -252,11 +303,17 @@
               <h2>Mobile Developer, Website Developer & UI/UX Designer</h2>
             </div>
 
-            <!--Call to Action-->
-            <a href="#works" class="button">SEE MY WORK</a>
-            <a href="#about" class="button" style="margin-left: 25px"
-              >MORE ABOUT ME</a
-            >
+            <div class="button-heading">
+              <!--Call to Action-->
+              <a href="#works" class="button btn-heading">SEE MY WORK</a>
+              <a
+                href="#about"
+                class="button btn-heading"
+                style="margin-left: 25px"
+                >MORE ABOUT ME</a
+              >
+            </div>
+
             <!--End Call to Action-->
           </div>
         </div>
@@ -287,23 +344,26 @@
               <h2 class="section-title">AKMAL ADHA</h2>
               <p class="section-subtitle"></p>
             </div>
-            <p>
-              Hey, my name is Muhamad Akmal Adha and I use NotAjumma as my
-              nickname across developer community. I'm a student degree in
-              Information Technology at UiTM Perlis, Malaysia.
-            </p>
-            <p>
-              A passionate individual with a flair for Mobile Development, Web
-              Development, and UX/UI Design. Beyond coding, I find joy in
-              exploring the realms of games and pop music. My curiosity is the
-              driving force that motivates me, always pushing me to learn more
-              about new technologies and creative coding.
-            </p>
+            <div class="section-details">
+              <p>
+                Hey, my name is Muhamad Akmal Adha and I use NotAjumma as my
+                nickname across developer community. I'm a student degree in
+                Information Technology at UiTM Perlis, Malaysia.
+              </p>
+              <p>
+                A passionate individual with a flair for Mobile Development, Web
+                Development, and UX/UI Design. Beyond coding, I find joy in
+                exploring the realms of games and pop music. My curiosity is the
+                driving force that motivates me, always pushing me to learn more
+                about new technologies and creative coding.
+              </p>
+            </div>
+
             <!-- Just replace the Video ID "UYJ5IjBRlW8" with the ID of your video on YouTube (Found within the URL) -->
             <a
               href="file/Resume-MuhamadAkmalAdha.pdf"
               target="_blank"
-              class="button"
+              class="button btn-heading"
             >
               <!-- Specify the desired file name for the downloaded file -->
               RESUME
@@ -313,7 +373,7 @@
           <!--End Content Right Side-->
 
           <div class="col-3">
-            <img src="images/user-images/akmalberdiri2.jpeg" alt="About" />
+            <img id="responsiveImage" class="img-about" alt="About" />
           </div>
         </div>
       </div>
@@ -324,7 +384,7 @@
         <!--Introduction-->
         <section id="service" class="introduction scrollto">
           <div class="row clearfix">
-            <div class="col-3">
+            <div class="col-3 mobile-col-3">
               <div class="section-heading">
                 <h3>MY SERVICE</h3>
                 <h2 class="section-title">What Service I Can Offer You</h2>
@@ -404,7 +464,7 @@
         <!--Clients-->
         <section id="skills" class="scrollto clearfix">
           <div class="row clearfix">
-            <div class="col-3">
+            <div class="col-3 mobile-col-3">
               <div class="section-heading">
                 <h3>SKILLS</h3>
                 <h2 class="section-title">My Professional Skills</h2>
@@ -443,7 +503,7 @@
               </div>
             </div>
 
-            <div class="col-2-3" style="margin-top: 70px">
+            <div class="col-2-3">
               <a href="#" class="col-3">
                 <img
                   src="https://logowik.com/content/uploads/images/codeigniter-new6422.logowik.com.webp"
@@ -691,5 +751,21 @@
     <script src="js/images-loaded.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <script src="js/site.js"></script>
+    <script>
+      // Check if the device is a mobile device
+      function isMobileDevice() {
+        return window.innerWidth <= 599; // Adjust the breakpoint as needed
+      }
+
+      // Get the image element
+      var imgElement = document.getElementById("responsiveImage");
+
+      // Check if it's a mobile device and update the image source accordingly
+      if (isMobileDevice()) {
+        imgElement.src = "images/banner-images/ori-berdiri2.jpg";
+      } else {
+        imgElement.src = "images/user-images/akmalberdiri2.jpeg";
+      }
+    </script>
   </body>
 </html>
